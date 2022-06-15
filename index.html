@@ -1,30 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Reno MarketPlace</title>
+    <title>Sans Fransisco-Showroom</title>
   </head>
   <body>
 
-  	<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Me</button>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fw-bold position-fixed" style="z-index: 10; width: 100%;">
+      <div class="container-fluid">
+        <p class="navbar-brand text-light fs-3 mx-4 my-1">San-Fransisco Showroom</p>
+        <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-light"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="#">About Showroom</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Features</a>
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-dark border fw-bold" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">My Profile</button>
+      </div>
+    </nav>
 
-    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-	  <div class="offcanvas-header">
-	    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Profile</h5>
-	    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-	  </div>
-	  <div class="offcanvas-body">
-	    <p>Try scrolling the rest of the page to see this option in action.</p>
-	  </div>
-	</div>
+    <!-- Slide -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Sf-Img/slide.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="Sf-Img/slide.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="Sf-Img/slide.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
+    <h3 class="bg-dark text-light p-3 fw-bold text-center">Best Seller</h3>
+
+    <!-- Best Seller -->
+    <div class="container-sm d-flex justify-content-center flex-column m-3 mx-auto" style="width: 80%;">
+      <div class="card mb-3 mx-auto" style="width: 80%;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="Sf-Img/huntley.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Huntley</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between">
+              <p class="card-text"><small class="text-muted">Total Sold : 80</small></p>
+              <button type="button" class="btn fw-bold" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Show Details
+            </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 mx-auto" style="width: 80%;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="Sf-Img/huntley.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Huntley</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between">
+              <p class="card-text"><small class="text-muted">Total Sold : 80</small></p>
+              <button type="button" class="btn fw-bold" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Show Details
+            </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 mx-auto" style="width: 80%;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="Sf-Img/huntley.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Huntley</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between">
+              <p class="card-text"><small class="text-muted">Total Sold : 80</small></p>
+              <button type="button" class="btn fw-bold" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Show Details
+            </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Select and Filter -->
+    <div class="bg-dark text-light p-2 align-items-center fw-bold text-center d-flex justify-content-between">
+      <p class="fs-6 text-light fs-3 mx-4">Our Vehicles</p>
+      <div class="input-group" style="width: 40%; height: 30px;">
+        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>Filter by Categories</option>
+          <option value="1">All Vehicles</option>
+          <option value="2">Car</option>
+          <option value="3">MotorCycle</option>
+        </select>
+        <button class="btn btn-outline-secondary" type="button">Filter</button>
+      </div>
+    </div>
+
+    <h3 class="text-center m-3">All Vehicles</h3>
+    <hr style="width: 40%;" class="mx-auto">
+
+    <!-- dealer info -->
+    <div class="container-sm d-flex justify-content-center m-1 mx-auto flex-wrap" style="width: 80%;">
+      <div class="card mx-auto" style="width: 18rem;">
+        <img src="Sf-Img/infernus.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Infernus</h5>
+          <p class="card-text">Sport</p>
+          <button type="button" class="btn btn-dark fw-bold sm-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Show Details
+        </button>
+        </div>
+      </div>
+      <div class="card mx-auto" style="width: 18rem;">
+        <img src="Sf-Img/infernus.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Infernus</h5>
+          <p class="card-text">Sport</p>
+          <button type="button" class="btn btn-dark fw-bold sm-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Show Details
+        </button>
+        </div>
+      </div>
+      <div class="card mx-auto" style="width: 18rem;">
+        <img src="Sf-Img/infernus.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Infernus</h5>
+          <p class="card-text">Sport</p>
+          <button type="button" class="btn btn-dark fw-bold sm-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Show Details
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="..." class="d-flex justify-content-center fw-bold m-3">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Detail cars -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OffCanvas -->
+    <div class="offcanvas offcanvas-start bg-dark text-light" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" style="z-index: 12;">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Mutsurini</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p class="text-warning font-monospace m-1">Not Member</p>
+        <p class="text-success m-0" style="font-size: 12px;">Balance : 5000$</p>
+      </div>
+      <div class="m-2 d-flex justify-content-between">
+        <button type="button" class="btn btn-light fw-bold text-dark border border-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalHistory">Show History</button>
+      <button type="button" class="btn btn-warning fw-bold text-light btn-sm" data-bs-toggle="modal" data-bs-target="#modalHistory">Join Member</button>
+      </div>
+    </div>
+
+    <p class="bg-dark text-light p-3 text-center m-0">CopyRight by SanFransisco ShowRoom</p>
+
+    <!-- modal for history -->
+    <div class="modal fade" id="modalHistory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>
-
