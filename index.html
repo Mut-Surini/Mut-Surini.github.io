@@ -59,11 +59,11 @@
     <h3 class="bg-dark text-light p-3 fw-bold text-center">Best Seller</h3>
 
     <!-- Best Seller -->
-    <div class="container-sm d-flex justify-content-center flex-column m-3 mx-auto" style="width: 80%;">
+    <div class="container-sm d-flex justify-content-center flex-column m-3 mx-auto best-seller" style="width: 80%;">
       <div class="card mb-3 mx-auto" style="width: 80%;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="Sf-Img/huntley.jpg" class="img-fluid rounded-start" alt="...">
+            <img src="Sf-Img/huntley.jpg" class="img-fluid rounded-start" alt="..." style="height: 100%;">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -123,21 +123,20 @@
     <div class="bg-dark text-light p-2 align-items-center fw-bold text-center d-flex justify-content-between">
       <p class="fs-6 text-light fs-3 mx-4">Our Vehicles</p>
       <div class="input-group" style="width: 40%; height: 30px;">
-        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>Filter by Categories</option>
-          <option value="1">All Vehicles</option>
-          <option value="2">Car</option>
-          <option value="3">MotorCycle</option>
+        <select class="form-select filter-value" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>All Vehicles</option>
+          <option value="Car">Cars</option>
+          <option value="MotorCycle">MotorCycles</option>
         </select>
-        <button class="btn btn-outline-secondary" type="button">Filter</button>
+        <button class="btn btn-outline-secondary filter-button" type="button">Filter</button>
       </div>
     </div>
 
-    <h3 class="text-center m-3">All Vehicles</h3>
+    <h3 class="text-center m-3 label-dealer">All Vehicles</h3>
     <hr style="width: 40%;" class="mx-auto">
 
     <!-- dealer info -->
-    <div class="container-sm d-flex justify-content-center m-1 mx-auto flex-wrap" style="width: 80%;">
+    <div class="container-sm d-flex justify-content-center m-1 mx-auto flex-wrap dealer-info" style="width: 80%;">
       <div class="card mx-auto" style="width: 18rem;">
         <img src="Sf-Img/infernus.png" class="card-img-top" alt="...">
         <div class="card-body">
@@ -191,29 +190,45 @@
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <h5 class="modal-title" id="staticBackdropLabel">Details Vehicle</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            ...
+          <div class="modal-body car-detail">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="Sf-Img/infernus.png" class="img-fluid rounded-start" alt="..." style="height: 100%">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Infernus</h5>
+                      <p class="card-text"><small class="text-muted">Car >> Sport</small></p>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text text-success">Price : 2000$</p>
+                      <p class="card-text"><small class="text-danger">Sold Out : 30</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <button type="button" class="btn btn-success">Purchase</button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- OffCanvas -->
-    <div class="offcanvas offcanvas-start bg-dark text-light" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" style="z-index: 12;">
+    <div class="offcanvas offcanvas-start bg-dark text-light my-profile" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" style="z-index: 12;">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Mutsurini</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close text-reset text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <p class="text-warning font-monospace m-1">Not Member</p>
-        <p class="text-success m-0" style="font-size: 12px;">Balance : 5000$</p>
+        <p class="text-warning font-monospace m-1 member-info">Not Member</p>
+        <p class="text-success m-0 balance-info" style="font-size: 12px;">Balance : 5000$</p>
+        <button type="button" class="btn btn-success fw-bold text-light btn-sm m-2" data-bs-toggle="modal" data-bs-target="#modalHistory">Add Balance</button>
       </div>
       <div class="m-2 d-flex justify-content-between">
         <button type="button" class="btn btn-light fw-bold text-dark border border-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalHistory">Show History</button>
@@ -223,20 +238,71 @@
 
     <p class="bg-dark text-light p-3 text-center m-0">CopyRight by SanFransisco ShowRoom</p>
 
-    <!-- modal for history -->
-    <div class="modal fade" id="modalHistory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- modal for myprofile button -->
+    <div class="modal fade modal-profile" id="modalHistory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Member Class</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-wrap justify-content-evenly">
+            <div class="card text-center my-2" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Reguler class</h5>
+                <hr>
+                <p class="text-center text-success my-0"><small>$1000 for 1 month</small></p>
+                <p class="text-center text-muted my-0"><small>Profit join</small></p>
+                <ul class="list-group">
+                  <li class="list-group-item">Menerima Informasi dealer Lebih Cepat</li>
+                  <li class="list-group-item">Menjadi Prioritas dalam kontrak</li>
+                  <li class="list-group-item">Kesempatan menerima diskon</li>
+                  <li class="list-group-item">Menghapus pemotongan pajak akun</li>
+                </ul>
+                <a href="#" class="btn btn-warning text-light fw-bold m-2 btn-member">Join this Class</a>
+              </div>
+            </div>
+            <div class="card text-center" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Advanced class</h5>
+                <hr>
+                <p class="text-center text-success my-0"><small>$1000 for 6 Month</small></p>
+                <p class="text-center text-muted my-0"><small>Profit join</small></p>
+                <ul class="list-group">
+                  <li class="list-group-item">Menerima Informasi dealer Lebih Cepat</li>
+                  <li class="list-group-item">Menjadi Prioritas dalam kontrak</li>
+                  <li class="list-group-item">Kesempatan menerima diskon yang besar</li>
+                  <li class="list-group-item">Menghapus pemotongan pajak akun</li>
+                  <li class="list-group-item">Item dalam akun menerima kekebalan waktu</li>
+                </ul>
+                <a href="#" class="btn btn-warning text-light fw-bold m-2 btn-member">Join this Class</a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="alert-member">
+                
+            </div>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for join member-->
+    <div class="modal fade" id="joinMember" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Are you Sure for join to this class??</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             ...
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-warning">Yes Sure</button>
           </div>
         </div>
       </div>
